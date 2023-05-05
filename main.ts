@@ -28,6 +28,7 @@ radio.onReceivedValue(function (name, value) {
         action = "F"
     }
 })
+let strip: neopixel.Strip = null
 let action = ""
 let yValue = 0
 let xValue = 0
@@ -67,6 +68,7 @@ basic.forever(function () {
     } else if (action == "F") {
         comment.comment("Insert F-Button Action Between These Comments")
         comment.comment("Insert F-Button Action Between These Comments")
+        strip = neopixel.create(DigitalPin.P0, 4, NeoPixelMode.RGB)
         wuKong.setAllMotor(100, 0)
         wuKong.setLightMode(wuKong.LightMode.BREATH)
         action = "Z"
