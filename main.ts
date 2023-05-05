@@ -51,6 +51,8 @@ basic.forever(function () {
     } else if (action == "C") {
         comment.comment("Insert C-Button Action Between These Comments")
         comment.comment("Insert C-Button Action Between These Comments")
+        wuKong.setAllMotor(0, 100)
+        wuKong.setLightMode(wuKong.LightMode.BREATH)
         action = "Z"
     } else if (action == "D") {
         comment.comment("Insert D-Button Action Between These Comments")
@@ -65,6 +67,8 @@ basic.forever(function () {
     } else if (action == "F") {
         comment.comment("Insert F-Button Action Between These Comments")
         comment.comment("Insert F-Button Action Between These Comments")
+        wuKong.setAllMotor(100, 0)
+        wuKong.setLightMode(wuKong.LightMode.BREATH)
         action = "Z"
     } else {
         comment.comment("DO NOT CHANGE!")
